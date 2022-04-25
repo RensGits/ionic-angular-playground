@@ -1,17 +1,29 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header >
+  <ion-toolbar color="tertiary">
     <ion-title>
-      Tab 2
+      Math
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<ion-content >
+  <ion-grid>
+    <ion-row >
+      <ion-col size-md="6">
+        <ion-card>
+          <ion-card-content>
+            <ion-card-header>
+              <ion-card-title>
+                Counter: {{mathCounter}}
+              </ion-card-title>
+            </ion-card-header>
+            <div class="ion-text-right">
+              <ion-button color="tertiary" (click)="handleSubstraction()">-</ion-button>
+              <ion-button color="tertiary" (click)="handleAddition()">+</ion-button>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

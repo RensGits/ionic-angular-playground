@@ -7,6 +7,15 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
+  mathCounter = 0;
+
   constructor() {}
+
+  handleSubstraction(){
+    this.mathCounter -= 1;
+  }
+  handleAddition(){
+    this.mathCounter += 1;
+  }
 
 }

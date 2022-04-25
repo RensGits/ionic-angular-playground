@@ -1,0 +1,1 @@
+A repository for teaching myself Angular Ionic
