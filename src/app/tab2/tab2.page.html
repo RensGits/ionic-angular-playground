@@ -10,7 +10,7 @@
   <ion-grid>
     <ion-row >
       <ion-col size-md="6">
-        <ion-card>
+        <ion-card [class.card-active]="mathCounter % 2 === 0">
           <ion-card-content>
             <ion-card-header>
               <ion-card-title [ngStyle]="{
