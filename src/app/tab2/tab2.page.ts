@@ -18,4 +18,12 @@ export class Tab2Page {
     this.mathCounter += 1;
   }
 
+  setClasses(){
+    const myClasses={
+      rowstyle1: this.mathCounter % 2 === 0,
+      rowstyle2: this.mathCounter % 2 !== 0,
+    };
+    return myClasses;
+  }
+
 }
