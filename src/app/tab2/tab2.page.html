@@ -16,9 +16,16 @@
               <ion-card-title>
                 Counter: {{mathCounter}}
               </ion-card-title>
+              <p>This number is 
+                <span>
+                  <ng-template [ngIf]="mathCounter < 3" [ngIfElse]="bigger">smaller </ng-template>
+                  <ng-template #bigger>bigger</ng-template>
+                </span>
+                than 3.
+              </p>
             </ion-card-header>
             <div class="ion-text-right">
-              <ion-button color="tertiary" (click)="handleSubstraction()">-</ion-button>
+              <ion-button color="tertiary" (click)="handleSubtraction()">-</ion-button>
               <ion-button color="tertiary" (click)="handleAddition()">+</ion-button>
             </div>
           </ion-card-content>

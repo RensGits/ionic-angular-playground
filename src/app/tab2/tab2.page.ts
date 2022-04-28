@@ -11,7 +11,7 @@ export class Tab2Page {
 
   constructor() {}
 
-  handleSubstraction(){
+  handleSubtraction(){
     this.mathCounter -= 1;
   }
   handleAddition(){
