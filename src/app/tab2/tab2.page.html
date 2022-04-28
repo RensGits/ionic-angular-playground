@@ -14,7 +14,10 @@
           <ion-card-content>
             <ion-card-header>
               <ion-card-title>
-                Counter: {{mathCounter}}
+                Counter: 
+                <span [style.color]="mathCounter % 2 === 0 ? 'purple' : 'black' ">
+                  {{mathCounter}}
+                </span>
               </ion-card-title>
               <p>This number is 
                 <span>
@@ -22,6 +25,20 @@
                   <ng-template #bigger>bigger</ng-template>
                 </span>
                 than 3.
+              </p>
+              <p>This number is an
+                <span>
+                  <ng-template [ngIf]="mathCounter % 2 === 0" [ngIfElse]="odd">even</ng-template>
+                  <ng-template #odd>odd</ng-template>
+                </span>
+                number.
+              </p>
+              <p>This number is
+                <span>
+                  <ng-template [ngIf]="mathCounter % 2 === 0" [ngIfElse]="black">purple.</ng-template>
+                  <ng-template #black>black.</ng-template>
+                </span>
+               
               </p>
             </ion-card-header>
             <div class="ion-text-right">
